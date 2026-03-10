@@ -54,7 +54,9 @@ public abstract class CommonFontSpan extends AlignmentReplacementSpan {
         float drawX;
 
         ITextViewAttribute textAttribute = getTextAttribute();
-        float canvasWidth = canvas.getWidth() - textAttribute.getPaddingLeft() - textAttribute.getPaddingRight();
+        int paddingLeft = textAttribute.getPaddingLeft();
+        int paddingRight = textAttribute.getPaddingRight();
+        float canvasWidth = canvas.getWidth() - paddingLeft - paddingRight;
         // 获取 TextView 文本重心
         int gravity = textAttribute.getTextGravity();
         // 获取当前布局方向（LTR 或 RTL）
@@ -66,7 +68,7 @@ public abstract class CommonFontSpan extends AlignmentReplacementSpan {
             drawX = x;
         } else if (hasFlag(gravity, Gravity.RIGHT)) {
             // 右对齐
-            drawX = canvasWidth - textWidth;
+            drawX = Math.max(canvasWidth - textWidth, 0);
         } else if ((isRtl && hasFlag(gravity, Gravity.END)) || (!isRtl && hasFlag(gravity, Gravity.START))) {
             // 左对齐或 START 对齐（适配布局方向）
             drawX = x;
