@@ -348,15 +348,18 @@ public final class TextColorBuilder {
                                                     @Nullable int[] textGradientColors) {
         LinearGradient linearGradient;
         if (textGradientOrientation == GRADIENT_ORIENTATION_VERTICAL) {
+            float x = view.getPaddingLeft();
+            float yStart = view.getPaddingTop();
+            float yEnd = (float) canvas.getHeight() - view.getPaddingBottom();
             linearGradient = new LinearGradient(
-                view.getPaddingLeft(), view.getPaddingTop(), 0,
-                (float) canvas.getHeight() - view.getPaddingBottom(),
+                x, yStart, x, yEnd,
                 textGradientColors, null, Shader.TileMode.CLAMP);
         } else {
+            float y = view.getPaddingTop();
+            float xStart = view.getPaddingLeft();
+            float xEnd = (float) canvas.getWidth() - view.getPaddingRight();
             linearGradient = new LinearGradient(
-                view.getPaddingLeft(), view.getPaddingTop(),
-                (float) canvas.getWidth() - view.getPaddingEnd(),
-                (float) canvas.getHeight() - view.getPaddingBottom(),
+                xStart, y, xEnd, y,
                 textGradientColors, null, Shader.TileMode.CLAMP);
         }
         return linearGradient;
