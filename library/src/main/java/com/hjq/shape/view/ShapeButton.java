@@ -57,9 +57,7 @@ public class ShapeButton extends AppCompatButton implements
 
     @Override
     public void setText(CharSequence text, BufferType type) {
-        if (type != BufferType.SPANNABLE  &&
-            mTextColorBuilder != null &&
-            mTextColorBuilder.isTextStrokeColorEnable()) {
+        if (mTextColorBuilder != null && mTextColorBuilder.isTextStrokeColorEnable()) {
             super.setText(mTextColorBuilder.buildStrokeFontSpannable(text), BufferType.SPANNABLE);
         } else {
             super.setText(text, type);
