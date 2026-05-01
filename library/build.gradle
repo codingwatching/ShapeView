@@ -36,7 +36,7 @@ dependencies {
     implementation 'androidx.constraintlayout:constraintlayout:1.1.0'
 
     // ShapeDrawable：https://github.com/getActivity/ShapeDrawable
-    implementation 'com.github.getActivity:ShapeDrawable:3.3'
+    implementation 'com.github.getActivity:ShapeDrawable:5.0'
 }
 
 // 防止编码问题

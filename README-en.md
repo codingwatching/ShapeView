@@ -49,7 +49,7 @@ dependencies {
     // ShapeView: https://github.com/getActivity/ShapeView
     implementation 'com.github.getActivity:ShapeView:10.0'
     // ShapeDrawable: https://github.com/getActivity/ShapeDrawable
-    implementation 'com.github.getActivity:ShapeDrawable:3.3'
+    implementation 'com.github.getActivity:ShapeDrawable:5.0'
 }
 ```
 
