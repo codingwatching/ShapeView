@@ -3,11 +3,11 @@ package com.hjq.shape.span;
 import android.graphics.Canvas;
 import android.graphics.Color;
 import android.graphics.Paint;
-import android.support.annotation.ColorInt;
-import android.support.annotation.NonNull;
 import android.text.SpannableStringBuilder;
 import android.text.Spanned;
 import android.widget.TextView;
+import androidx.annotation.ColorInt;
+import androidx.annotation.NonNull;
 import com.hjq.shape.config.ITextViewAttribute;
 import com.hjq.shape.other.TextViewAttribute;
 

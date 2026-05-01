@@ -1,12 +1,12 @@
 package com.hjq.shape.span;
 
-import android.support.annotation.NonNull;
 import android.text.Layout;
 import android.text.Layout.Alignment;
 import android.text.style.AlignmentSpan;
 import android.text.style.ReplacementSpan;
 import android.view.Gravity;
 import android.view.View;
+import androidx.annotation.NonNull;
 import com.hjq.shape.config.ITextViewAttribute;
 
 /**

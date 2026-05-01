@@ -5,11 +5,11 @@ import android.graphics.LinearGradient;
 import android.graphics.Paint;
 import android.graphics.Paint.FontMetricsInt;
 import android.graphics.Shader;
-import android.support.annotation.NonNull;
 import android.text.SpannableStringBuilder;
 import android.text.Spanned;
 import android.widget.LinearLayout;
 import android.widget.TextView;
+import androidx.annotation.NonNull;
 import com.hjq.shape.config.ITextViewAttribute;
 import com.hjq.shape.other.TextViewAttribute;
 

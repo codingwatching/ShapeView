@@ -53,18 +53,22 @@ dependencies {
 }
 ```
 
-#### AndroidX Compatibility
+#### Support library compatible
 
-* If your project is based on the **AndroidX** library, please add the following configuration in the project's `gradle.properties` file. If it is already added, you can ignore this step.
+* Option 1: Use remote dependencies of the old version framework
 
-```text
-# Indicates using AndroidX
-android.useAndroidX = true
-# Indicates migrating third-party libraries to AndroidX
-android.enableJetifier = true
+```groovy
+dependencies {
+    // ShapeView: https://github.com/getActivity/ShapeView
+    implementation 'com.github.getActivity:ShapeView:10.0'
+    // ShapeDrawable: https://github.com/getActivity/ShapeDrawable
+    implementation 'com.github.getActivity:ShapeDrawable:3.3'
+}
 ```
 
-* If your project is based on the **Support** library, you do not need to add this configuration
+* Option 2: If your project is still in the Support phase and it's not convenient to migrate to **AndroidX** yet, but you want to use the latest version of the framework, you can use the [JetifierStandalone](https://developer.android.com/tools/jetifier#install) tool provided by **Google** to convert the **aar** packages from the released Release versions into **Support-compatible aar** packages using reverse mode.
+
+* You can choose either of the above two options, but it's still not recommended. These are only stopgap measures, not long-term solutions. Subsequent versions of the framework will no longer support **Support** projects. The best approach is to migrate your project to **AndroidX**.
 
 #### Framework Documentation
 

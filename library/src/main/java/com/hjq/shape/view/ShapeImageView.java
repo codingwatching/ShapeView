@@ -2,9 +2,8 @@ package com.hjq.shape.view;
 
 import android.content.Context;
 import android.content.res.TypedArray;
-import android.support.v7.widget.AppCompatImageView;
 import android.util.AttributeSet;
-
+import androidx.appcompat.widget.AppCompatImageView;
 import com.hjq.shape.R;
 import com.hjq.shape.builder.ShapeDrawableBuilder;
 import com.hjq.shape.config.IGetShapeDrawableBuilder;
